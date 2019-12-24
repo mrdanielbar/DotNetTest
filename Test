@@ -21,5 +21,61 @@
 
 
 
+
+// Q Challenge
+
+            Console.WriteLine("How many seconds?");
+            int MilisecondsTotal = Convert.ToInt32(Console.ReadLine());
+
+            if (MilisecondsTotal < 0)
+            {
+                Console.WriteLine("Error");
+            }
+
+            else
+            {
+                int Days = MilisecondsTotal / (1000 * 60 * 60 * 24);
+                int Hours = (MilisecondsTotal - 1000 * 60 * 60 * 24 * Days) / (1000 * 60 * 60);
+                int Minutes = (MilisecondsTotal - 1000 * 60 * 60 * 24 * Days - 1000 * 60 * 60 * Hours) / (1000 * 60);
+                int Seconds = (MilisecondsTotal - 1000 * 60 * 60 * 24 * Days - 1000 * 60 * 60 * Hours - 1000 * 60 * Minutes) / 1000;
+                int MiliSeconds = (MilisecondsTotal - 1000 * 60 * 60 * 24 * Days - 1000 * 60 * 60 * Hours - 1000 * 60 * Minutes) % 1000;
+
+                Console.WriteLine($"{Days} days, {Hours} hours, {Minutes} minutes, {Seconds} seconds, {MiliSeconds} miliseconds");
+
+            }
+// END
+
+
+
+
+
 // Q3
 
+            Console.WriteLine("Choose number");
+            int Num = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 1; i <= Num; i++)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write(j);
+                }
+                                
+                for (int k = Num - i; k >= 1; k--)
+                {
+                    Console.Write("*");
+                }
+
+                Console.WriteLine();
+            }
+           
+           
+// END
+
+
+
+
+
+// Q4
+
+                
