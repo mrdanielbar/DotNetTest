@@ -1,0 +1,25 @@
+// Q2
+
+            Console.WriteLine("How many seconds?");
+            int secondsTotal = Convert.ToInt32(Console.ReadLine());
+
+            if (secondsTotal < 0)
+            {
+                Console.WriteLine("Error");
+            }
+            else
+            {
+                int Days = secondsTotal / (60 * 60 * 24);
+                int Hours = (secondsTotal - 60 * 60 * 24 * Days) / (60 * 60);
+                int Minutes = (secondsTotal - 60 * 60 * 24 * Days - 60 * 60 * Hours) / 60;
+                int Seconds = (secondsTotal - 60 * 60 * 24 * Days - 60 * 60 * Hours) % 60;
+
+                Console.WriteLine($"{Days} days, {Hours} hours, {Minutes} minutes, {Seconds} seconds");
+                
+// END
+
+
+
+
+// Q3
+
